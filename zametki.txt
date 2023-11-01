@@ -1,0 +1,17 @@
+При создании проекта, мы создаем виртуальное окружение
+python3 -m venv venv (второй venv это название виртуального окружения)
+
+чтобы активировать вирт окружение вводим след. команду
+source venv/bin/activate venv название впрт окружения
+
+pip install {название модуля(библиотеки)} - установить модуль
+pip install -r {название файла} - установить все модули из txt файла
+
+response = requests.get("https://enter.kg/computers/noutbuki_bishkek")
+# print(response.text)
+
+soup = BS(response.text, 'lxml')
+# print(soup)
+soup.find('div', class_= "item")
+soup.find_all()
+soup.get()
